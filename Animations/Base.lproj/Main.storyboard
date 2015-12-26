@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1a8-fW-c9t">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="Hpy-Gv-LZg">
+            <objects>
+                <viewController storyboardIdentifier="AMMain" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1a8-fW-c9t" customClass="AMMain" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KYl-js-Scd"/>
+                        <viewControllerLayoutGuide type="bottom" id="bhs-mv-Eio"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yUx-cl-yyV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BgForMapChoose" translatesAutoresizingMaskIntoConstraints="NO" id="tM4-02-hdo">
+                                <rect key="frame" x="-564" y="0.0" width="1727" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="BEQ-KR-t1I"/>
+                                </constraints>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HaZ-0F-lwX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" id="X5D-de-eg0">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick your Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rip-Hn-KRa">
+                                <rect key="frame" x="207" y="73" width="186" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Oab-z1-fno"/>
+                                    <constraint firstAttribute="width" constant="186" id="mH7-vE-XwE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="21"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKc-7a-CjK">
+                                <rect key="frame" x="165" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="qG3-jY-bQO"/>
+                                    <constraint firstAttribute="width" constant="100" id="zAj-3o-6hJ"/>
+                                </constraints>
+                                <state key="normal" image="Apple maps"/>
+                                <connections>
+                                    <action selector="appleMapChosen:" destination="1a8-fW-c9t" eventType="touchUpInside" id="cjg-ue-s6i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPC-NM-ESH">
+                                <rect key="frame" x="335" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="F1V-LQ-y8h"/>
+                                    <constraint firstAttribute="height" constant="100" id="mfV-bE-Ki9"/>
+                                </constraints>
+                                <state key="normal" image="Google Maps"/>
+                                <connections>
+                                    <action selector="googleMapChosen:" destination="1a8-fW-c9t" eventType="touchUpInside" id="yk2-oF-dTE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rip-Hn-KRa" firstAttribute="top" secondItem="KYl-js-Scd" secondAttribute="bottom" constant="53" id="3Le-jW-ayt"/>
+                            <constraint firstItem="rPC-NM-ESH" firstAttribute="centerX" secondItem="yUx-cl-yyV" secondAttribute="centerX" constant="85" id="HWb-Zh-fSk"/>
+                            <constraint firstItem="HaZ-0F-lwX" firstAttribute="leading" secondItem="yUx-cl-yyV" secondAttribute="leadingMargin" constant="-20" id="KFb-QT-YVc"/>
+                            <constraint firstItem="bhs-mv-Eio" firstAttribute="top" secondItem="tM4-02-hdo" secondAttribute="bottom" id="MNW-OZ-XrB"/>
+                            <constraint firstItem="QKc-7a-CjK" firstAttribute="centerX" secondItem="yUx-cl-yyV" secondAttribute="centerX" constant="-85" id="Nmh-Uc-jQy"/>
+                            <constraint firstItem="rPC-NM-ESH" firstAttribute="centerY" secondItem="yUx-cl-yyV" secondAttribute="centerY" id="PKC-eU-EOM"/>
+                            <constraint firstItem="HaZ-0F-lwX" firstAttribute="top" secondItem="yUx-cl-yyV" secondAttribute="topMargin" id="Sba-ZZ-29H"/>
+                            <constraint firstItem="tM4-02-hdo" firstAttribute="top" secondItem="KYl-js-Scd" secondAttribute="bottom" constant="-20" id="U8L-pW-pw2"/>
+                            <constraint firstItem="HaZ-0F-lwX" firstAttribute="centerX" secondItem="yUx-cl-yyV" secondAttribute="centerX" id="XS9-97-3KG"/>
+                            <constraint firstItem="bhs-mv-Eio" firstAttribute="top" secondItem="HaZ-0F-lwX" secondAttribute="bottom" id="Yzw-hU-w0w"/>
+                            <constraint firstItem="tM4-02-hdo" firstAttribute="centerX" secondItem="yUx-cl-yyV" secondAttribute="centerX" id="eQL-wl-Dfi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HaZ-0F-lwX" secondAttribute="trailing" constant="-20" id="mcG-af-ryh"/>
+                            <constraint firstItem="Rip-Hn-KRa" firstAttribute="centerX" secondItem="yUx-cl-yyV" secondAttribute="centerX" id="sX2-BB-cUa"/>
+                            <constraint firstItem="QKc-7a-CjK" firstAttribute="centerY" secondItem="yUx-cl-yyV" secondAttribute="centerY" id="thl-Wc-T4O"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appleMap" destination="QKc-7a-CjK" id="iL1-ct-dBZ"/>
+                        <outlet property="background" destination="tM4-02-hdo" id="TMh-Lb-Yl3"/>
+                        <outlet property="googleMap" destination="rPC-NM-ESH" id="KtU-en-Afi"/>
+                        <outlet property="pickYourMapLbl" destination="Rip-Hn-KRa" id="zzm-cU-Y1N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5TZ-X6-9Cs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="288"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Apple maps" width="512" height="512"/>
+        <image name="BgForMapChoose" width="1727" height="814"/>
+        <image name="Google Maps" width="256" height="256"/>
+    </resources>
+</document>
